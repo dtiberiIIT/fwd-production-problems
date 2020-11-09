@@ -17,30 +17,47 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 }
 #three {
   background-color: purple;
+  order: 3;
+  height: 33.33333vw;
+  width: 33.3333vw;
 }
 #two {
   background-color: green;
+  order: 2;
+  height: 33.33333vw;
+  width: 33.3333vw;
 }
 #one {
   background-color: red;
+  order: 1;
+  height: 33.33333vw;
+  width: 33.3333vw;
 }
-
 
 /* ==== LAYOUT STYLES ==== */
 #content {
-
-}
-
-#three,
-#two,
-#one {
-
+  display: flex;
+  flex-wrap: wrap;
+  float: left;
+  align-items: flex-start;
 }
 
 @media screen and (min-width: 600px) {
-
+  #three {
+    flex: 2 1 auto;
+    width: 100vw;
+    height: 50vw;
+  }
+  #two, #one {
+    flex: 1 1 auto;
+    height: 50vw;
+    width: 50vw;
+  }
 }
 
 @media screen and (min-width: 800px) {
-
+  #three, #two, #one {
+    height: 33.33333vw;
+    width: 33.3333vw;
+  }
 }
