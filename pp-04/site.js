@@ -6,14 +6,32 @@
 
 x = 5;
 
+/*
 function double(num) {
-  x = num * 2;
+  var x = num * 2;
   return x;
 }
+*/
 
-double(6);
+function doMath(n){
+  if(typeof n == "number") {
+    var double = function(n) {
+      var x = n * 2;
+      return x;
+    }
+  
+    n = double(6);
+    console.log('The function outputs', n);
+  }
+  
+  else {
+    console.log('The function was not passed a number.');
+  }
+}
+
+doMath(6);
 console.log('The value of x is', x, '-- it should be 5.');
-
+doMath("Zebra");
 /*
   Step 2. Rewrite the JavaScript `double()` function above so that
   it does not pollute the global namespace: that is, neither its
