@@ -16,19 +16,19 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
   color: white;
 }
 #three {
-  background-color: purple;
+  background-color: rgb(128, 238, 255);
   order: 3;
   height: 33.33333vw;
   width: 33.3333vw;
 }
 #two {
-  background-color: green;
+  background-color: rgb(177, 235, 52);
   order: 2;
   height: 33.33333vw;
   width: 33.3333vw;
 }
 #one {
-  background-color: red;
+  background-color: rgb(255, 145, 209);
   order: 1;
   height: 33.33333vw;
   width: 33.3333vw;
@@ -40,6 +40,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
   flex-wrap: wrap;
   float: left;
   align-items: flex-start;
+  flex-direction: column;
 }
 
 @media screen and (min-width: 600px) {
@@ -53,11 +54,17 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
     height: 50vw;
     width: 50vw;
   }
+  #content {
+    flex-direction: row;
+  }
 }
 
 @media screen and (min-width: 800px) {
   #three, #two, #one {
     height: 33.33333vw;
     width: 33.3333vw;
+  }
+  #content {
+    flex-direction: row;
   }
 }
